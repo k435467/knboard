@@ -1,3 +1,21 @@
+### My Notes
+
+If run into the following error.
+
+> FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'http://ppa.launchpad.net/ansible/ansible/ubuntu focal Release' does not have a Release file."}
+
+Reference [the github issue](https://github.com/ansible/ansible/issues/30754) to remove files in /etc/apt/sources.list.d on target machine.
+
+#### Create a Superuser
+
+```sh
+cd /srv/knboard/
+docker-compose run django bash
+python3 manage.py createsuperuser
+```
+
+---
+
 <h1 align="center">Simple Kanban boards</h1>
 
 👉 [View Live](http://knboard.com/)
